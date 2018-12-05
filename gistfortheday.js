@@ -72,10 +72,10 @@ const cipher = { //key gives us abcd cipher[key] gives 1234
     return answer;
   }
   decodeWords: function(sentence){
-    
+
   }
 };
 
-// console.log(cipher.decoder('apple'));
+// console.log(cipher.decoder('apple'));.....
 console.log(cipher.decoder('apple'));
 
