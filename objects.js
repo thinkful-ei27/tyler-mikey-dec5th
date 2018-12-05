@@ -82,7 +82,7 @@ return decodedSentence;
   };
 
 // console.log(cipher.decoder('apple'));.....
-console.log(cipher.decodeWords('craft block argon meter bells brown croon droop'));
+// console.log(cipher.decodeWords('craft block argon meter bells brown croon droop'));
 
  //  const decodeWords = senArray.forEach(word => {this.decoder(word);} );
 
@@ -110,8 +110,25 @@ console.log(cipher.decodeWords('craft block argon meter bells brown croon droop'
   };
 }
 
-  const characters = []
+  const characters = [
+new CreateCharacter('Gandalf the White', 'Gandalf', 'wizard', 'Middle Earth', 10 ,6),
+new CreateCharacter('Bilbo baggins', 'bilbo', 'Hobbit','The Shire', 2, 1),
+new CreateCharacter('Frodo Baggins','Frodo', 'Hobbit','The Shire', 3, 2),
+new CreateCharacter('Aragorn son of Arathorn', 'Aragorn', 'Man', 'Dunnedain', 6 , 8),
+new CreateCharacter('Legolas', 'legolas','elf', 'woodland Realm', 8, 5)
+];
 
 
  
 
+characters.push(new CreateCharacter('Arwen Undomiel', 'Arwen', 'Half-Elf', 'Rivendell', 2 , 11));
+
+// console.log(characters);
+
+const aragornDescribe = characters.find(character => { if 
+ (character.nickname === 'Aragorn'){
+   return character.describe();
+ }
+});
+
+console.log(aragornDescribe)
