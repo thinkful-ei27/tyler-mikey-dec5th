@@ -85,3 +85,33 @@ return decodedSentence;
 console.log(cipher.decodeWords('craft block argon meter bells brown croon droop'));
 
  //  const decodeWords = senArray.forEach(word => {this.decoder(word);} );
+
+ function CreateCharacter(name, nickname, race, origin, attack, defense){
+  this.name = name, 
+  this.nickname = nickname,
+  this.race = race,
+  this.origin = origin,
+  this.attack = attack,
+  this.defense = defense,
+  this.describe = function(){
+    console.log(`${this.name} is ${this.race} race from ${this.origin}`)
+  },
+  this.evaluateFight = function(character){
+    let x = 0; // opponent damage
+    let y = 0; // your damage
+    if(this.defense < character.attack){
+      y = character.attack - this.defense}
+    if(character.defense < this.attack){
+      x = this.attack - character.defense
+    }
+    console.log(`your opponent takes ${x} damage and you receive ${y} damage`);
+
+      
+  };
+}
+
+  const characters = []
+
+
+ 
+
