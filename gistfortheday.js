@@ -66,16 +66,22 @@ const cipher = { //key gives us abcd cipher[key] gives 1234
     for(const key in cipher){
       if(string.charAt(0) === key){
           answer += string.charAt(cipher[key])
-        
-    }
+      }
+      else answer += ' ';
   }
     return answer;
-  }
+  },
   decodeWords: function(sentence){
-
-  }
-};
+    let decodedSentence = '';
+    const senArray = sentence.split(' ');
+for(let i=0; i < senArray.length; i ++){
+  decodedSentence += cipher.decoder(senArray[i]);
+}
+return decodedSentence;
+    }
+  };
 
 // console.log(cipher.decoder('apple'));.....
-console.log(cipher.decoder('apple'));
+console.log(cipher.decodeWords('craft block argon meter bells brown croon droop'));
 
+ //  const decodeWords = senArray.forEach(word => {this.decoder(word);} );
