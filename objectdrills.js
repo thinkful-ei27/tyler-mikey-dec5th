@@ -66,4 +66,52 @@ const studentData = [
     },
   ];
 
-  console.log(enrollInSummerSchool(studentData));
+//   console.log(enrollInSummerSchool(studentData));
+
+
+function findById(items, idNum){
+    for(let i=0; i<items.length; i++){
+        if( items[i].id === idNum){
+            return items[i]
+        }
+
+    }
+
+}
+const scratchData = [
+    { id: 22, foo: 'bar' },
+    { id: 28, foo: 'bizz' },
+    { id: 19, foo: 'bazz' },
+  ];
+
+//   console.log(findById(scratchData, 40));
+
+function validateKeys(object, expectedKeys){
+if( Object.keys(object).length !== expectedKeys.length){return false}
+for(let i=0; i<Object.keys(object).length; i++){
+    if(!Object.keys(object)[i] === expectedKeys[i]){
+        return false;
+    }
+    return true;
+}
+};
+
+const objectA = {
+    id: 2,
+    name: 'Jane Doe',
+    age: 34,
+    city: 'Chicago',
+  };
+  
+  // running the function with `objectB` and `expectedKeys`
+  // should return `false`
+  const objectB = {
+    id: 3,
+    age: 33,
+    city: 'Peoria',
+  };
+  
+  const expectedKeys = ['id', 'name', 'age', 'city'];
+
+  
+  console.log( validateKeys(objectA, expectedKeys));
